@@ -1,7 +1,8 @@
 import { useEffect, useState, useCallback } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
-import Chat from '../components/Chat'
+import Chat from '../components/QuiblyChat.jsx'
+import Levels from '../components/Levels.jsx'
 
 const today = () => new Date().toLocaleDateString('en-CA')
 
