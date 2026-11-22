@@ -1,0 +1,38 @@
+:root { --bg:#fff6ef; --card:#fff; --ink:#3b2a3a; --muted:#8a7487; --acc:#ff6f91; --line:#f2dfe0; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#241a27; --card:#33263a; --ink:#fbeff3; --muted:#b9a3b8; --line:#4a3a52; }
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Nunito","Trebuchet MS",system-ui,sans-serif; }
+.page { max-width:480px; margin:0 auto; padding:16px; }
+.top { display:flex; justify-content:space-between; align-items:center; }
+.card { background:var(--card); border:2px solid var(--line); border-radius:20px;
+  padding:14px; margin:12px 0; }
+input { width:100%; padding:11px 12px; margin:4px 0 8px; border-radius:14px;
+  border:2px solid var(--line); background:var(--bg); color:var(--ink); font:inherit; }
+button { border:0; border-radius:999px; padding:10px 18px; background:var(--acc);
+  color:#fff; font:inherit; font-weight:800; cursor:pointer; }
+button.alt { background:var(--bg); color:var(--ink); border:2px solid var(--line); }
+button:disabled { opacity:.5; }
+a, .link { color:var(--acc); cursor:pointer; font-weight:700; }
+.muted { color:var(--muted); font-size:14px; }
+.error { color:crimson; }
+
+.stats { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:12px 0; }
+.stat { background:var(--card); border:2px solid var(--line); border-radius:18px;
+  padding:10px; text-align:center; }
+.stat b { display:block; font-size:22px; }
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0; }
+.chip { background:var(--bg); color:var(--ink); border:2px solid var(--line); }
+.chip.on { background:#ffc65c; border-color:#ffc65c; color:#3b2a3a; }
+.check { display:flex; align-items:center; gap:8px; margin:10px 0; }
+.check input { width:auto; margin:0; }
+
+.chatbox { max-height:40vh; overflow:auto; display:flex; flex-direction:column; gap:6px; padding:4px; }
+.msg { max-width:82%; padding:8px 12px; border-radius:16px; background:var(--bg);
+  border:1px solid var(--line); align-self:flex-start; overflow-wrap:anywhere; }
+.msg.me { align-self:flex-end; background:#5a2f45; }
+.msg small { display:block; color:var(--muted); font-size:11px; }
+.sendrow { display:flex; gap:8px; margin-top:8px; }
+.sendrow input { margin:0; flex:1; }
