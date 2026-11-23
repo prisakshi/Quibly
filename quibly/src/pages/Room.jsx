@@ -100,6 +100,7 @@ export default function Room() {
           </p>
         ))}
       </div>
+            <Levels roomId={id} onChange={load} />
             <Chat roomId={id} />
     </div>
   )
